@@ -31,9 +31,9 @@ main() {
 				printf("Codigo de cliente invalido, considerado cliente normal\n");
 		}
 		
-		printf("O valor total da compra R$%g", valorTotal);
+		printf("O valor total da compra R$%.2f", valorTotal);
 	} else {
-		printf("O valor total da compra nao pode ser negativo")
+		printf("O valor total da compra nao pode ser negativo");
 	}
 	
 	
