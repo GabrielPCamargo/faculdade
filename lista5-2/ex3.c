@@ -9,20 +9,24 @@
 
 main() {
 	float numero, soma = 0;
-	int quantidade = 5, i = 0, qtdPositivo = 0, qtdNegativo = 0;
+	int quantidade = 0, qtdPositivo = 0, qtdNegativo = 0;
 	
-	while(i < quantidade) {
-		printf("Escreva um numero: ");
-		scanf("%f", &numero);
-		
+	printf("Escreva um numero: ");
+	scanf("%f", &numero);
+	
+	while(numero != 0) {		
 		soma += numero;
-		if(numero > 0) {
+		
+		if (numero > 0) {
 			qtdPositivo++;
 		} else {
 			qtdNegativo++;
 		}
 		
-		i++;
+		quantidade++;
+		
+		printf("Escreva um numero: ");
+		scanf("%f", &numero);
 	}
 	
 	printf("A media aritmetica: %.2f\n", soma / quantidade);
