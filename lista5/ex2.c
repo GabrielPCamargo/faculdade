@@ -8,11 +8,11 @@ o valor do kwh e, para cada habitante, entre com os dados: consumo do mês e o có
 #include<stdio.h>
 
 main() {
-	int habitantes = 0, i, codigo;
+	int habitantes = -1, i, codigo;
 	float precoKwh = 0, consumoMes = -1, menorConsumo = 0,
 	maiorConsumo = 0, totalConsumo = 0, consumoResidencial = 0, consumoComercial = 0, consumoIndustrial = 0;
 	
-	while(habitantes <= 0) {
+	while(habitantes < 0) {
 		printf("Digite o numero de habitantes: ");
 		scanf("%d", &habitantes);
 	}
