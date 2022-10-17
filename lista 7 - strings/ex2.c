@@ -7,24 +7,20 @@ int main() {
     printf("Digite a frase: ");
     gets(frase);
     printf("\n");
+    strupr(frase);
 
     for(i = 0; i < strlen(frase); i++) {
         switch(frase[i]) {
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
             case 'A':
             case 'E':
             case 'I':
             case 'O':
             case 'U':
-                printf("*");
+                frase[i] = '*';
                 break;
-            default:
-                printf("%c", frase[i]);
         }
     }
+
+    puts(frase);
     return 0;
 }
