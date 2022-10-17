@@ -73,5 +73,6 @@ main() {
 	}
 	
 	
-	printf("Tipo de fruta %d, quantidade: %d, Preco da fruta com desconto: %f, total: %f", tipoFruta, quantidade, precoFruta, precoFruta * quantidade);
+	printf("Tipo de fruta %d, quantidade: %d, Preco da fruta com desconto: %f, total: %f", 
+	tipoFruta, quantidade, precoFruta, precoFruta * quantidade);
 }
