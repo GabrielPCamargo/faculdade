@@ -20,24 +20,30 @@ int main() {
 
     f = fopen("notas.txt", "r");
 
-    int total = 0;
+    if(f != NULL) {
+        int total = 0;
 
-    aluno alunos[3];
-    for (int i = 0; i < 3; i++)
-    {
-        fscanf(f, "Nome: %s nota1: %f nota2: %f media: %f\n", alunos[i].nome, &alunos[i].nota1, &alunos[i].nota2, &alunos[i].media);
-        total += alunos[i].media;
+        aluno alunos[3];
+        for (int i = 0; i < 3; i++)
+        {
+            fscanf(f, "Nome: %s nota1: %f nota2: %f media: %f\n", alunos[i].nome, &alunos[i].nota1, &alunos[i].nota2, &alunos[i].media);
+            total += alunos[i].media;
+        }
+
+        
+        for (int i = 0; i < 3; i++)
+        {
+            printf("Nome: %s nota1: %.2f nota2: %.2f media: %.2f\n", alunos[i].nome, alunos[i].nota1, alunos[i].nota2, alunos[i].media);
+        }
+
+        printf("Media da turma: %.2f", (float)total / 3);
+        
+        fclose(f);
+
+    } else {
+        printf("Nao foi possivel abrir o arquivo");
     }
 
-    
-    for (int i = 0; i < 3; i++)
-    {
-        printf("Nome: %s nota1: %.2f nota2: %.2f media: %.2f\n", alunos[i].nome, alunos[i].nota1, alunos[i].nota2, alunos[i].media);
-    }
-
-    printf("Media da turma: %.2f", (float)total / 3);
-    
-    fclose(f);
 
     return 0;
 }

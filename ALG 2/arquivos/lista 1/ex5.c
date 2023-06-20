@@ -26,15 +26,17 @@ int main() {
 
     FILE *f = fopen("text.txt", "w");
 
-    int total = i;
+    if(f != NULL) {
+        int total = i;
+        for (i = 0; i < total; i++)
+        {
+        fputs(linha[i], f);
+        }
 
-    for (i = 0; i < total; i++)
-    {
-       fputs(linha[i], f);
+        fclose(f);
+    } else {
+        printf("Nao foi possivel abrir o arquivo");
     }
-
-    fclose(f);
-    
 
     return 0;
 }

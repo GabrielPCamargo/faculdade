@@ -28,12 +28,16 @@ int main() {
 
     f = fopen("notas.txt", "w");
 
-    for (int i = 0; i < 3; i++)
-    {
-        fprintf(f, "Nome: %s nota1: %.2f nota2: %.2f media: %.2f\n", alunos[i].nome, alunos[i].nota1, alunos[i].nota2, alunos[i].media);
+    if(f != NULL) {
+        for (int i = 0; i < 3; i++)
+        {
+            fprintf(f, "Nome: %s nota1: %.2f nota2: %.2f media: %.2f\n", alunos[i].nome, alunos[i].nota1, alunos[i].nota2, alunos[i].media);
+        }
+        
+        fclose(f);
+    } else {
+        printf("Nao foi possivel abrir o arquivo");
     }
-    
-    fclose(f);
 
     return 0;
 }
