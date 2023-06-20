@@ -1,0 +1,3 @@
+Nome: gabriel nota1: 10.00 nota2: 10.00 media: 10.00
+Nome: irineu nota1: 5.60 nota2: 7.50 media: 6.55
+Nome: isabel nota1: 8.00 nota2: 2.50 media: 5.25
